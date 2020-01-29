@@ -30,7 +30,7 @@
   "methods": [
     {
       "name": "startVm",
-      "viewName": "StartVm Machine",
+      "viewName": "Start Machine",
       "params": [
         {
           "name": "resoueceGroup",

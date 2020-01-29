@@ -2,9 +2,22 @@
 const msRest = require('@azure/ms-rest-nodeauth');
 const armCompute = require("@azure/arm-compute");
 
+/**
+ * Internal function for handling authentication and generation of compute mamagement client
+ * @param {*} action 
+ * @param {*} settings 
+ * @returns ComputeManagementClient
+ */
 function _getComputeService(action, settings){
+	/**
+	 * Create credentials from the clientId, secret and domain
+	 */
 	return msRest.loginWithServicePrincipalSecret(
 		settings.clientId, settings.secret, settings.domain).then(credentials=>{
+			/**
+			 * Create new compute mamagement client using the credentials and subscription ID
+			 * And returns the new compute mamagement client
+			 */
 			const client = new armCompute.ComputeManagementClient(credentials, settings.subscriptionId);
 			return client;
 		});

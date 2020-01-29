@@ -1,0 +1,15 @@
+{
+  "name": "kaholo-plugin-azure-compute",
+  "version": "1.0.0",
+  "description": "Simple command line tool",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Productionmap team (Yehonatan Bitton)",
+  "license": "ISC",
+  "dependencies": {
+    "@azure/arm-compute": "13.0.0",
+    "@azure/ms-rest-nodeauth": "3.0.3"
+  }
+}

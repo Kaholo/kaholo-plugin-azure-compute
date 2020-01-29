@@ -1,0 +1,72 @@
+{
+  "name": "Azure Compute",
+  "type": "executer",
+  "exposeRoute": false,
+  "execProgram": "node",
+  "main": "app.js",
+  "version": "1.0.0",
+  "settings" : [
+    {
+      "name": "clientId",
+      "viewName": "Client or App ID",
+      "type": "string"
+    },
+    {
+      "name": "secret",
+      "viewName": "Secret or Password",
+      "type": "vault"
+    },
+    {
+      "name": "domain",
+      "viewName": "Domain or Tenant ID",
+      "type": "string"
+    },
+    {
+      "name": "subscriptionId",
+      "viewName": "Subscription ID",
+      "type": "string"
+    }
+  ],
+  "methods": [
+    {
+      "name": "startVm",
+      "viewName": "StartVm Machine",
+      "params": [
+        {
+          "name": "resoueceGroup",
+          "viewName": "Resouece Group",
+          "type": "string"
+        },
+        {
+          "name": "machineName",
+          "viewName": "Machine Name",
+          "type": "string"
+        }
+      ],
+      "actionString": "StartVM"
+    },
+    {
+      "name": "stoptVm",
+      "viewName": "Stop Machine",
+      "params": [
+        {
+          "name": "resoueceGroup",
+          "viewName": "Resouece Group",
+          "type": "string"
+        },
+        {
+          "name": "machineName",
+          "viewName": "Machine Name",
+          "type": "string"
+        },
+        {
+          "name": "skipShutdown",
+          "viewName": "Skip Shutdown",
+          "type": "boolean"
+        }
+      ],
+      "actionString": "StopVM"
+    }
+  ],
+  "imgUrl": "logo.png"
+}

@@ -4,7 +4,8 @@
   "exposeRoute": false,
   "execProgram": "node",
   "main": "app.js",
-  "version": "1.0.0",
+  "imgUrl": "logo.png",
+  "version": "1.1.0",
   "settings" : [
     {
       "name": "clientId",
@@ -42,8 +43,7 @@
           "viewName": "Machine Name",
           "type": "string"
         }
-      ],
-      "actionString": "StartVM"
+      ]
     },
     {
       "name": "stoptVm",
@@ -64,9 +64,7 @@
           "viewName": "Skip Shutdown",
           "type": "boolean"
         }
-      ],
-      "actionString": "StopVM"
+      ]
     }
-  ],
-  "imgUrl": "logo.png"
+  ]
 }
